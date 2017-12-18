@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,12 +95,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1297" y="37"/>
+            <point key="canvasLocation" x="-1540" y="-9"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="pxe-tl-SKa">
             <objects>
-                <viewController id="ryf-hu-8Qn" sceneMemberID="viewController">
+                <viewController id="ryf-hu-8Qn" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rr7-fM-v7f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,6 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desire League" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkx-Vm-Faj">
                                         <rect key="frame" x="55.5" y="50" width="264" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="4pS-sC-vip"/>
                                             <constraint firstAttribute="width" constant="264" id="ikY-2S-J6C"/>
                                             <constraint firstAttribute="height" constant="20" id="nuz-Y5-ini"/>
                                         </constraints>
@@ -166,16 +165,18 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghL-9h-bcR" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
-                                <rect key="frame" x="20" y="607" width="335" height="40"/>
+                                <rect key="frame" x="20" y="597" width="335" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40199593319999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="3ij-0I-oHS"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="mb7-zB-BoL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="mb7-zB-BoL" userLabel="height =50"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="ryf-hu-8Qn" eventType="touchUpInside" id="eJL-vi-7pu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jt-aA-NKV">
                                 <rect key="frame" x="10" y="30" width="35" height="20"/>
@@ -209,16 +210,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QaA-6Z-EbB"/>
                     </view>
+                    <connections>
+                        <segue destination="1Ge-8a-ea4" kind="show" identifier="skillVCSegue" id="cMN-4M-vNv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sc-y8-x5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iGg-Ml-1Ex" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-172" y="38"/>
+            <point key="canvasLocation" x="-906" y="-9"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="Ty9-sX-Lbe">
             <objects>
-                <viewController id="1Ge-8a-ea4" sceneMemberID="viewController">
+                <viewController id="1Ge-8a-ea4" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dq3-Tl-GrJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,7 +241,6 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="264" id="C9Q-Rb-eUJ"/>
                                             <constraint firstAttribute="height" constant="20" id="DVh-qi-KcU"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="tJf-Lf-Od4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -276,9 +279,7 @@
                                 <rect key="frame" x="20" y="607" width="335" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40199593319999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Ble-VW-nAw"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="dt7-Ly-E60"/>
-                                    <constraint firstAttribute="height" constant="40" id="xNf-Dy-YAt"/>
+                                    <constraint firstAttribute="height" constant="40" id="xNf-Dy-YAt" userLabel="height = 50"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="FINISH">
@@ -307,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gQ-z7-syR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="37"/>
+            <point key="canvasLocation" x="-23" y="-9"/>
         </scene>
     </scenes>
     <resources>
